@@ -24,7 +24,7 @@ workflows:
           npm install
       - name: Build React App
         script: |
-          # API_KEY sẽ được lấy từ biến môi trường trong group api_keys
+          # Xây dựng ứng dụng bằng Vite
           npm run build
     artifacts:
       - build/**
