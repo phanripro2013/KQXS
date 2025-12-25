@@ -9,9 +9,9 @@ workflows:
       node: latest
       npm: latest
       groups:
-        - api_keys # Tạo group này trên Dashboard Codemagic để chứa API_KEY
+        - api_keys
       vars:
-        PUBLIC_URL: "https://xoso-kimtien.web.app" # Thay bằng URL thật của bạn
+        PUBLIC_URL: "https://xoso-kimtien.web.app"
     triggering:
       events:
         - push
@@ -24,20 +24,11 @@ workflows:
           npm install
       - name: Build React App
         script: |
-          # API_KEY sẽ được lấy từ biến môi trường đã cấu hình trong Codemagic
+          # API_KEY sẽ được lấy từ biến môi trường trong group api_keys
           npm run build
     artifacts:
       - build/**
     publishing:
-      # Ví dụ: Phát hành lên Firebase Hosting (Cần cài đặt firebase-tools và cấu hình token)
-      # firebase:
-      #   project_id: xoso-kimtien-123
-      #   token: $FIREBASE_TOKEN
-      
-      # Hoặc gửi thông báo khi hoàn thành
       email:
         recipients:
           - tonyhoaivu@gmail.com
-        notified_on_build_start: true
-        on_failure: true
-        on_success: true

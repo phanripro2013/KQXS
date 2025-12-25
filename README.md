@@ -10,16 +10,18 @@
 - **Soi cầu AI:** Trợ lý ảo sử dụng Gemini API để phân tích xác suất và gợi ý cặp số đẹp.
 - **Phong thủy cải vận:** Xin quẻ may mắn dựa trên ngày sinh và thuật số học.
 - **Bảng thảo luận:** Cộng đồng giao lưu, chia sẻ kinh nghiệm soi cầu giữa các thành viên.
-- **Hệ thống quản trị:** Quản lý hội viên, bài viết và chiến dịch quảng cáo chuyên nghiệp.
 
 ## 🚀 Tự động hóa CI/CD với Codemagic
 
-Ứng dụng đã được cấu hình sẵn tệp `codemagic.yaml`. Để kích hoạt:
+Ứng dụng đã được cấu hình sẵn tệp `codemagic.yaml`. Để kích hoạt thành công:
 
 1. Đăng nhập vào [Codemagic.io](https://codemagic.io/).
 2. Kết nối với Repository GitHub của bạn.
-3. Trong phần **Environment Variables**, thêm biến `API_KEY` (Chứa khóa Gemini API của bạn).
-4. Chạy build. Hệ thống sẽ tự động cài đặt, xây dựng bản phân phối và lưu trữ artifacts tại thư mục `build/`.
+3. Trong phần **Environment Variables**:
+   - Tạo một **Variable group** tên là `api_keys`.
+   - Thêm biến `API_KEY` với giá trị là khóa Gemini API của bạn.
+   - Chọn group này trong cài đặt Workflow.
+4. Nhấn **Start New Build**. Hệ thống sẽ tự động build và thông báo qua email khi hoàn thành.
 
 ## 🛠 Hướng dẫn cài đặt thủ công
 
@@ -27,21 +29,13 @@
    ```bash
    git init
    git add .
-   git commit -m "Initial commit - Xổ Số Kim Tiền"
+   git commit -m "Fix: Update codemagic config"
    ```
 
 2. **Đẩy code lên GitHub:**
-   - Tạo một repository mới trên GitHub.
-   - Chạy lệnh:
    ```bash
-   git remote add origin https://github.com/USER_NAME/REPO_NAME.git
-   git branch -M main
-   git push -u origin main
+   git push origin main
    ```
-
-3. **Chạy local:**
-   - Cài đặt dependencies: `npm install`
-   - Chạy ứng dụng: `npm start`
 
 ## 🛠 Công nghệ sử dụng
 
@@ -53,4 +47,4 @@
 Hotline hỗ trợ: **0927.099.940** (Tony Hoài Vũ)
 
 ---
-*Lưu ý: Ứng dụng này chỉ mang tính chất tham khảo và giải trí. Xổ số là trò chơi may rủi, hãy chơi có trách nhiệm.*
+*Lưu ý: Ứng dụng này chỉ mang tính chất tham khảo và giải trí.*
