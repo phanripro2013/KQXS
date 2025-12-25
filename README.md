@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🧧 Xổ Số Kim Tiền - Tài Lộc Gõ Cửa
 
-This contains everything you need to run your app locally.
+Ứng dụng tra cứu kết quả xổ số 3 miền (Bắc - Trung - Nam) nhanh nhất, tích hợp công nghệ AI để dự đoán và phân tích con số may mắn.
 
-View your app in AI Studio: https://ai.studio/apps/drive/11aataUvuHfJA-JDZ9hI_E-HBSOpMg6ri
+## ✨ Tính năng nổi bật
 
-## Run Locally
+- **Kết quả trực tiếp:** Cập nhật kết quả xổ số 3 miền theo thời gian thực.
+- **Quay thử đa đài:** Giả lập lồng cầu quay số cho tất cả các tỉnh thành trong ngày.
+- **Soi cầu AI:** Trợ lý ảo sử dụng Gemini API để phân tích xác suất và gợi ý cặp số đẹp.
+- **Phong thủy cải vận:** Xin quẻ may mắn dựa trên ngày sinh và thuật số học.
+- **Bảng thảo luận:** Cộng đồng giao lưu, chia sẻ kinh nghiệm soi cầu giữa các thành viên.
+- **Hệ thống quản trị:** Quản lý hội viên, bài viết và chiến dịch quảng cáo chuyên nghiệp.
 
-**Prerequisites:**  Node.js
+## 🚀 Tự động hóa CI/CD với Codemagic
 
+Ứng dụng đã được cấu hình sẵn tệp `codemagic.yaml`. Để kích hoạt:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Đăng nhập vào [Codemagic.io](https://codemagic.io/).
+2. Kết nối với Repository GitHub của bạn.
+3. Trong phần **Environment Variables**, thêm biến `API_KEY` (Chứa khóa Gemini API của bạn).
+4. Chạy build. Hệ thống sẽ tự động cài đặt, xây dựng bản phân phối và lưu trữ artifacts tại thư mục `build/`.
+
+## 🛠 Hướng dẫn cài đặt thủ công
+
+1. **Khởi tạo repository:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit - Xổ Số Kim Tiền"
+   ```
+
+2. **Đẩy code lên GitHub:**
+   - Tạo một repository mới trên GitHub.
+   - Chạy lệnh:
+   ```bash
+   git remote add origin https://github.com/USER_NAME/REPO_NAME.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **Chạy local:**
+   - Cài đặt dependencies: `npm install`
+   - Chạy ứng dụng: `npm start`
+
+## 🛠 Công nghệ sử dụng
+
+- **Frontend:** React 19, Tailwind CSS.
+- **AI Engine:** Google Gemini SDK (`@google/genai`).
+- **CI/CD:** Codemagic.
+
+## 📞 Liên hệ
+Hotline hỗ trợ: **0927.099.940** (Tony Hoài Vũ)
+
+---
+*Lưu ý: Ứng dụng này chỉ mang tính chất tham khảo và giải trí. Xổ số là trò chơi may rủi, hãy chơi có trách nhiệm.*
